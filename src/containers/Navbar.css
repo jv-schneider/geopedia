@@ -1,0 +1,21 @@
+#navbar-container {
+  background-color: #ced0ce02;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 3;
+  border: 1.5px solid #ced0c015;
+  border-radius: 10px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+button {
+  background-color: transparent;
+  border: 1.5px solid #ced0c015;
+  border-radius: 10px;
+  height: 50px;
+  color: #ced0ce;
+  padding: 0 50px;
+}

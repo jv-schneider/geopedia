@@ -1,0 +1,11 @@
+input {
+  background-color: transparent;
+  border: 1.5px solid #ced0c015;
+  border-radius: 10px;
+  height: 50px;
+  color: #ced0ce;
+  text-align: center;
+}
+input:focus {
+  outline: none !important;
+}
