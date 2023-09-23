@@ -1,4 +1,6 @@
-# Geography React-App
+# Geopedia
+
+**The #1 Geography React-App**
 
 **Simply type in your country name and get all the information you need!**
 
