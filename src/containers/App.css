@@ -4,6 +4,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 15px;
   color: #fff;
-  width: 75%;
-  margin: 50px 12.5%;
+  width: 85%;
+  margin: 50px 7.5%;
+}
+@media screen and (max-width: 1500px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+  }
 }

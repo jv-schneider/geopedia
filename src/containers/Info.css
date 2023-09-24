@@ -1,10 +1,25 @@
 #info-container {
-  background-color: #ced0ce02;
+  background-color: #ced0ce07;
   grid-row-start: 2;
   grid-column-start: 1;
   grid-row-end: 3;
   grid-column-end: 2;
-  border: 1.5px solid #ced0c015;
+  border: 2px solid #ced0c015;
   border-radius: 10px;
   height: 750px;
+}
+
+h1#country {
+  margin-left: 50px;
+  font-size: 40px;
+}
+
+div#information {
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 1500px) {
+  #info-container {
+    height: 500px;
+  }
 }

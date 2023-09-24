@@ -1,21 +1,30 @@
 #navbar-container {
-  background-color: #ced0ce02;
+  background-color: #ced0ce07;
   grid-row-start: 1;
   grid-column-start: 1;
   grid-row-end: 2;
   grid-column-end: 3;
-  border: 1.5px solid #ced0c015;
+  border: 2px solid #ced0c015;
   border-radius: 10px;
-  height: 100px;
+  height: auto;
+  padding: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-button {
-  background-color: transparent;
-  border: 1.5px solid #ced0c015;
-  border-radius: 10px;
+
+#logo-container {
+  font-size: 15px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50px;
+  color: #f15025;
+  gap: 10px;
+}
+img {
+  width: 50px;
   height: 50px;
-  color: #ced0ce;
-  padding: 0 50px;
 }
