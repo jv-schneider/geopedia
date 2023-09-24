@@ -1,10 +1,11 @@
 import React from "react";
 import "./Searchbar.css";
 
-const Searchbar = () => {
+const Searchbar = ({ handleChange }) => {
   return (
     <div id="searchbar-container">
-      <input type="text" />
+      <input type="text" onClick={handleChange} />
+      {/* <button onClick={handleChange}>Search</button> */}
     </div>
   );
 };

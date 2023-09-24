@@ -1,3 +1,8 @@
+div#searchbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 input {
   font-family: monospace;
   font-size: 20px;
@@ -10,8 +15,25 @@ input {
   min-width: 200px;
   color: #f15025;
   text-align: center;
-  margin: 0 50px;
+  margin: 0 25px;
 }
 input:focus {
   outline: none !important;
+}
+button {
+  font-family: monospace;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid #f15025;
+  color: #f15025;
+  border-radius: 10px;
+  height: 50px;
+  width: 8vw;
+  margin-right: 50px;
+  min-width: 100px;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: #f15025;
+  color: #0a090c;
 }
