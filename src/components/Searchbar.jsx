@@ -4,7 +4,7 @@ import "./Searchbar.css";
 const Searchbar = ({ handleChange }) => {
   return (
     <div id="searchbar-container">
-      <input type="text" onDoubleClick={handleChange} />
+      <input type="text" onClick={handleChange} />
       {/* <button onClick={handleChange}>Search</button> */}
     </div>
   );

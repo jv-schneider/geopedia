@@ -37,9 +37,25 @@ class App extends React.Component {
     fetch(this.state.countryURL)
       .then((r) => r.json())
       .then((r) => {
-        if (r[0].hasOwnProperty("capital")) {
-          this.setState({ infoData: r });
-        } else {
+        try {
+          if (r[0].hasOwnProperty("capital")) {
+            this.setState({ infoData: r });
+          } else {
+            this.setState({
+              infoData: [
+                {
+                  population: "0",
+                  capital: "0",
+                  region: "0",
+                  subregion: "0",
+                  altSpellings: ["0", "0", "0"],
+                  timezones: "0",
+                  borders: "0",
+                },
+              ],
+            });
+          }
+        } catch (error) {
           this.setState({
             infoData: [
               {
@@ -47,7 +63,7 @@ class App extends React.Component {
                 capital: "0",
                 region: "0",
                 subregion: "0",
-                altSpellings: ["0", "0", "0"],
+                altSpellings: ["0", "This is not a country!", "0"],
                 timezones: "0",
                 borders: "0",
               },
