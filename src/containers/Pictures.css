@@ -1,4 +1,6 @@
 #pictures-container {
+  display: flex;
+  justify-content: center;
   background-color: #ced0ce07;
   grid-row-start: 2;
   grid-column-start: 2;
@@ -8,6 +10,13 @@
   border-radius: 10px;
   height: 750px;
 }
+
+img#world {
+  margin-top: 50px;
+  width: 70%;
+  height: 70%;
+}
+
 @media screen and (max-width: 1500px) {
   #pictures-container {
     height: 500px;

@@ -11,10 +11,10 @@ class App extends React.Component {
       countryURL: "https://restcountries.com/v3.1/name/germany",
       infoData: [
         {
-          population: "0",
-          capital: "0",
-          region: "0",
-          altSpellings: ["0", "0", "0"],
+          population: "5",
+          capital: "Sindelfingen",
+          region: "Wunderland",
+          altSpellings: ["0", "Lummerland", "0"],
         },
       ],
       pictureData: "",
@@ -24,7 +24,8 @@ class App extends React.Component {
   componentDidMount() {
     fetch(this.state.countryURL)
       .then((r) => r.json())
-      .then((r) => this.setState({ infoData: r }));
+      .then((r) => this.setState({ infoData: r }))
+      .then(() => console.log(this.state.infoData));
   }
 
   stateChange = (event) => {
@@ -35,20 +36,28 @@ class App extends React.Component {
     });
     fetch(this.state.countryURL)
       .then((r) => r.json())
-      .then((r) => this.setState({ infoData: r }));
+      .then((r) => {
+        if (r[0].hasOwnProperty("capital")) {
+          this.setState({ infoData: r });
+        } else {
+          this.setState({
+            infoData: [
+              {
+                population: "0",
+                capital: "0",
+                region: "0",
+                subregion: "0",
+                altSpellings: ["0", "0", "0"],
+                timezones: "0",
+                borders: "0",
+              },
+            ],
+          });
+        }
+      });
   };
 
   render() {
-    if (!this.state.infoData) {
-      this.state.infoData = [
-        {
-          population: "0",
-          capital: "0",
-          region: "0",
-          altSpellings: ["0", "0", "0"],
-        },
-      ];
-    }
     return (
       <div id="app">
         <Navbar handleChange={this.stateChange} />
