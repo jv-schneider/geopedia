@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/geopedia/static/css/main.6b61aeca.css",
-    "main.js": "/portfolio/geopedia/static/js/main.dc7c0d0d.js",
-    "static/js/787.8c796def.chunk.js": "/portfolio/geopedia/static/js/787.8c796def.chunk.js",
-    "static/media/picture.svg": "/portfolio/geopedia/static/media/picture.c6092141f00288343801c1e27dcfca61.svg",
-    "index.html": "/portfolio/geopedia/index.html",
-    "main.6b61aeca.css.map": "/portfolio/geopedia/static/css/main.6b61aeca.css.map",
-    "main.dc7c0d0d.js.map": "/portfolio/geopedia/static/js/main.dc7c0d0d.js.map",
-    "787.8c796def.chunk.js.map": "/portfolio/geopedia/static/js/787.8c796def.chunk.js.map"
+    "main.css": "/geopedia/static/css/main.6b61aeca.css",
+    "main.js": "/geopedia/static/js/main.15082fc2.js",
+    "static/js/787.8c796def.chunk.js": "/geopedia/static/js/787.8c796def.chunk.js",
+    "static/media/picture.svg": "/geopedia/static/media/picture.c6092141f00288343801c1e27dcfca61.svg",
+    "index.html": "/geopedia/index.html",
+    "main.6b61aeca.css.map": "/geopedia/static/css/main.6b61aeca.css.map",
+    "main.15082fc2.js.map": "/geopedia/static/js/main.15082fc2.js.map",
+    "787.8c796def.chunk.js.map": "/geopedia/static/js/787.8c796def.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b61aeca.css",
-    "static/js/main.dc7c0d0d.js"
+    "static/js/main.15082fc2.js"
   ]
 }
