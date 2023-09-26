@@ -1,11 +1,10 @@
 import React from "react";
 import "./Pictures.css";
-import world from "../picture.svg";
 
-const Pictures = () => {
+const Pictures = (flag) => {
   return (
     <div id="pictures-container">
-      <img src={world} alt="" id="world" />
+      <img src={flag.flag} alt="" id="world" />
     </div>
   );
 };

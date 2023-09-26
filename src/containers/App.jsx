@@ -14,7 +14,11 @@ class App extends React.Component {
           population: "0",
           capital: "0",
           region: "0",
+          subregion: "0",
           altSpellings: ["0", "0", "0"],
+          timezones: "0",
+          borders: "0",
+          flags: ["0", "../picture.svg", "0"],
         },
       ],
       pictureData: "",
@@ -38,6 +42,7 @@ class App extends React.Component {
       fetch(this.state.countryURL)
         .then((r) => r.json())
         .then((r) => {
+          console.log(r);
           try {
             if (r[0].hasOwnProperty("capital")) {
               this.setState({ infoData: r });
@@ -52,6 +57,7 @@ class App extends React.Component {
                     altSpellings: ["0", "0", "0"],
                     timezones: "0",
                     borders: "0",
+                    flags: ["0", "../picture.svg", "0"],
                   },
                 ],
               });
@@ -67,6 +73,7 @@ class App extends React.Component {
                   altSpellings: ["0", "This is not a country!", "0"],
                   timezones: "0",
                   borders: "0",
+                  flags: ["0", "../picture.svg", "0"],
                 },
               ],
             });
@@ -80,7 +87,7 @@ class App extends React.Component {
       <div id="app">
         <Navbar handleChange={this.stateChange} />
         <Info data={this.state.infoData} />
-        <Pictures />
+        <Pictures flag={this.state.infoData[0].flags.svg} />
       </div>
     );
   }
