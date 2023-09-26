@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/geopedia/static/css/main.6b61aeca.css",
-    "main.js": "/geopedia/static/js/main.15082fc2.js",
+    "main.css": "/geopedia/static/css/main.bc445dc0.css",
+    "main.js": "/geopedia/static/js/main.25ad0b5b.js",
     "static/js/787.8c796def.chunk.js": "/geopedia/static/js/787.8c796def.chunk.js",
     "static/media/picture.svg": "/geopedia/static/media/picture.c6092141f00288343801c1e27dcfca61.svg",
     "index.html": "/geopedia/index.html",
-    "main.6b61aeca.css.map": "/geopedia/static/css/main.6b61aeca.css.map",
-    "main.15082fc2.js.map": "/geopedia/static/js/main.15082fc2.js.map",
+    "main.bc445dc0.css.map": "/geopedia/static/css/main.bc445dc0.css.map",
+    "main.25ad0b5b.js.map": "/geopedia/static/js/main.25ad0b5b.js.map",
     "787.8c796def.chunk.js.map": "/geopedia/static/js/787.8c796def.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b61aeca.css",
-    "static/js/main.15082fc2.js"
+    "static/css/main.bc445dc0.css",
+    "static/js/main.25ad0b5b.js"
   ]
 }
