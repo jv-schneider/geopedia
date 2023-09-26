@@ -18,7 +18,9 @@ class App extends React.Component {
           altSpellings: ["0", "0", "0"],
           timezones: "0",
           borders: "0",
-          flags: ["0", "../picture.svg", "0"],
+          flags: {
+            svg: "Websites/geopedia/src/picture.svg",
+          },
         },
       ],
       pictureData: "",
@@ -57,7 +59,9 @@ class App extends React.Component {
                     altSpellings: ["0", "0", "0"],
                     timezones: "0",
                     borders: "0",
-                    flags: ["0", "../picture.svg", "0"],
+                    flags: {
+                      svg: "Websites/geopedia/src/picture.svg",
+                    },
                   },
                 ],
               });
@@ -73,7 +77,9 @@ class App extends React.Component {
                   altSpellings: ["0", "This is not a country!", "0"],
                   timezones: "0",
                   borders: "0",
-                  flags: ["0", "../picture.svg", "0"],
+                  flags: {
+                    svg: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Globe_icon-white.svg/1200px-Globe_icon-white.svg.png",
+                  },
                 },
               ],
             });
