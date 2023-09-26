@@ -19,6 +19,7 @@ input {
 }
 input:focus {
   outline: none !important;
+  box-shadow: 0 0 15px #f15025;
 }
 button {
   font-family: monospace;
