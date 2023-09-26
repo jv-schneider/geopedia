@@ -4,4 +4,4 @@
 
 **Simply type in your country name and get all the information you need!**
 
-![world map](https://media.istockphoto.com/id/1331673615/de/vektor/karte-von-europa.jpg?s=612x612&w=0&k=20&c=WCi2giaPjl1zXkZPRA4MB7IRVd_u_xihr3oXzaSeWdE=)
+![world map](https://storage.googleapis.com/pod_public/1300/125296.jpg)
