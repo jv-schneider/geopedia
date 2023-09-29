@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Navbar";
 import Info from "./Info";
 import Pictures from "./Pictures";
+import SignIn from "./SignIn";
 
 class App extends React.Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends React.Component {
           },
         },
       ],
+      route: "signin",
       pictureData: "",
     };
   }
@@ -74,7 +76,11 @@ class App extends React.Component {
                   capital: "0",
                   region: "0",
                   subregion: "0",
-                  altSpellings: ["0", "This is not a country!", "0"],
+                  altSpellings: [
+                    "This is not a country!",
+                    "This is not a country!",
+                    "This is not a country!",
+                  ],
                   timezones: "0",
                   borders: "0",
                   flags: {
@@ -88,12 +94,35 @@ class App extends React.Component {
     }
   };
 
+  changeRoute(route) {
+    this.setState({ route: route });
+  }
+
+  login = () => {
+    this.changeRoute("app");
+  };
+
+  register = () => {
+    this.changeRoute("register");
+  };
+
+  signout = () => {
+    this.changeRoute("signin");
+  };
+
   render() {
     return (
-      <div id="app">
-        <Navbar handleChange={this.stateChange} />
-        <Info data={this.state.infoData} />
-        <Pictures flag={this.state.infoData[0].flags.svg} />
+      <div id="container">
+        <div id="register"></div>
+        {this.state.route === "signin" ? (
+          <SignIn login={this.login} register={this.register} />
+        ) : (
+          <div id="app">
+            <Navbar handleChange={this.stateChange} />
+            <Info data={this.state.infoData} signout={this.signout} />
+            <Pictures flag={this.state.infoData[0].flags.svg} />
+          </div>
+        )}
       </div>
     );
   }
