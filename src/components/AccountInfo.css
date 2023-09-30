@@ -1,30 +1,28 @@
-#info-container {
-  background-color: #ced0ce07;
-  grid-row-start: 2;
+#account-info-container {
+  grid-row-start: 3;
   grid-column-start: 1;
   grid-row-end: 3;
-  grid-column-end: 2;
+  grid-column-end: 3;
+  background-color: #ced0ce07;
   border: 2px solid #ced0c015;
   border-radius: 10px;
-  height: 750px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  gap: 25px;
 }
-
-h1#country {
-  margin: 30px 50px 60px 50px;
-  font-size: 40px;
+#account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
 }
-
-div#information {
-  margin: 0 50px;
-  line-height: 50px;
-  font-size: 15px;
-  word-wrap: break-word;
+#profile-name {
+  font-size: 30px;
 }
-
-span {
-  color: #f15025;
-}
-
 button#signout {
   font-weight: bold;
   font-family: monospace;
@@ -37,15 +35,8 @@ button#signout {
   height: 50px;
   min-width: 100px;
   transition: 0.8s;
-  margin: 50px 50px;
 }
 button#signout:hover {
   background-color: #f15025;
   color: #0a090c;
-}
-
-@media screen and (max-width: 1500px) {
-  #info-container {
-    height: auto;
-  }
 }

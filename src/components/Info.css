@@ -1,0 +1,33 @@
+#info-container {
+  background-color: #ced0ce07;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 2;
+  border: 2px solid #ced0c015;
+  border-radius: 10px;
+  height: 750px;
+}
+
+h1#country {
+  margin: 30px 50px 60px 50px;
+  font-size: 40px;
+  word-wrap: break-word;
+}
+
+div#information {
+  margin: 0 50px;
+  line-height: 50px;
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+span {
+  color: #f15025;
+}
+
+@media screen and (max-width: 1500px) {
+  #info-container {
+    height: auto;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Info.css";
 
-const Info = ({ data, signout }) => {
+const Info = ({ data }) => {
   return (
     <div id="info-container">
       <h1 id="country">{data[0].altSpellings[2]}</h1>
@@ -25,9 +25,6 @@ const Info = ({ data, signout }) => {
           Borders: <span>{data[0].borders + " "}</span>
         </h2>
       </div>
-      <button id="signout" onClick={signout}>
-        Sign out
-      </button>
     </div>
   );
 };

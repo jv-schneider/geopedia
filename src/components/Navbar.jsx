@@ -1,5 +1,5 @@
 import React from "react";
-import Searchbar from "../components/Searchbar";
+import Searchbar from "./Searchbar";
 import "./Navbar.css";
 import Logo from "../Logo.png";
 

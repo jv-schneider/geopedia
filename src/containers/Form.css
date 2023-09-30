@@ -11,7 +11,7 @@
   max-width: 750px;
   min-width: 300px;
   margin: 75px 12.5%;
-  height: 75vh;
+  height: 750px;
 }
 #headline-container {
   margin-top: 10px;
@@ -71,7 +71,7 @@ button.btn:hover {
 }
 
 @media screen and (max-width: 500px) {
-  #pictures-container {
-    height: 500px;
+  #form {
+    margin-top: 25px;
   }
 }

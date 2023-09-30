@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./Navbar";
-import Info from "./Info";
-import Pictures from "./Pictures";
-import SignIn from "./SignIn";
+import Navbar from "../components/Navbar";
+import Info from "../components/Info";
+import Pictures from "../components/Pictures";
+import Form from "./Form";
+import AccountInfo from "../components/AccountInfo";
 
 class App extends React.Component {
   constructor() {
     super();
+    this.backendServer = "http://localhost:3000/";
     this.state = {
       countryURL: "https://restcountries.com/v3.1/name/germany",
       infoData: [
@@ -26,14 +28,18 @@ class App extends React.Component {
       ],
       route: "signin",
       pictureData: "",
+      user: {
+        username: "",
+        password: "",
+        entries: 0,
+      },
     };
   }
 
   componentDidMount() {
     fetch(this.state.countryURL)
       .then((r) => r.json())
-      .then((r) => this.setState({ infoData: r }))
-      .then(() => console.log(this.state.infoData));
+      .then((r) => this.setState({ infoData: r }));
   }
 
   stateChange = (event) => {
@@ -46,10 +52,23 @@ class App extends React.Component {
       fetch(this.state.countryURL)
         .then((r) => r.json())
         .then((r) => {
-          console.log(r);
           try {
             if (r[0].hasOwnProperty("capital")) {
               this.setState({ infoData: r });
+              fetch(this.backendServer + "enter", {
+                method: "post",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  username: this.state.user.username,
+                }),
+              })
+                .then((r) => r.json())
+                .then((r) => {
+                  if (r === "success") {
+                    this.state.user.entries++;
+                    console.log(this.state.user);
+                  }
+                });
             } else {
               this.setState({
                 infoData: [
@@ -94,20 +113,18 @@ class App extends React.Component {
     }
   };
 
-  changeRoute(route) {
+  changeRoute = (route) => {
     this.setState({ route: route });
-  }
-
-  login = () => {
-    this.changeRoute("app");
   };
 
-  register = () => {
-    this.changeRoute("register");
-  };
-
-  signout = () => {
-    this.changeRoute("signin");
+  updateUser = (user) => {
+    this.setState({
+      user: {
+        username: user.username,
+        password: user.password,
+        entries: user.entries,
+      },
+    });
   };
 
   render() {
@@ -115,12 +132,23 @@ class App extends React.Component {
       <div id="container">
         <div id="register"></div>
         {this.state.route === "signin" ? (
-          <SignIn login={this.login} register={this.register} />
+          <Form
+            changeRoute={this.changeRoute}
+            updateUser={this.updateUser}
+            backendServer={this.backendServer}
+          />
         ) : (
           <div id="app">
             <Navbar handleChange={this.stateChange} />
-            <Info data={this.state.infoData} signout={this.signout} />
+            <Info data={this.state.infoData} />
             <Pictures flag={this.state.infoData[0].flags.svg} />
+            <AccountInfo
+              signout={() => {
+                this.setState({ route: "signin" });
+              }}
+              name={this.state.user.username}
+              entries={this.state.user.entries}
+            />
           </div>
         )}
       </div>
